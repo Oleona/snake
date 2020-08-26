@@ -56,6 +56,11 @@ if(direction== Direction.RIGHT)
             return x + ","+ y + ", "+ sym;
         }
 
+        public bool IsMit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+
 
         public void Drow()
         {
