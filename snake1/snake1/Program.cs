@@ -15,6 +15,30 @@ namespace snake1
             Console.SetBufferSize(80, 25);
             Console.SetWindowSize(80, 25);
 
+            VerticalLine v1 = new VerticalLine(0, 10, 5, '&');
+           // Draw(v1);
+
+            Point p = new Point(4, 5, '*');
+            figure fsnace = new Snake(p, 4, Direction.RIGHT);
+           // Draw(fsnace);
+            Snake snake = (Snake)fsnace;
+
+            HorizontalLine h1 = new HorizontalLine(0,5, 6, '*');
+
+            List<figure> figures = new List<figure>();
+figures.Add(fsnace);
+            figures.Add(v1);
+           
+            figures.Add(h1);
+            // figures.Add(snake);
+
+            foreach (var f in figures)
+            {
+                Draw(f);
+                f.Drow();
+            }
+
+            /*
             //ramka
             HorizontalLine upline = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
@@ -58,10 +82,17 @@ namespace snake1
           // snake.Move();
             }
 
-//Console.ReadLine();
-           
+//Console.ReadLine();*/
+            Console.ReadLine();
         }
  
+        static void Draw(figure figure)
+            {
+            figure.Drow();
+            
+        }
         
-    }
+    } 
+
 }
+

@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace snake1
 {
-     class FoodCreator
+    class FoodCreator
     {
         int mapheight;
         int mapwidth;
         char sym;
 
-       Random random = new Random();
+        Random random = new Random();
 
         public FoodCreator(int mapwidth, int mapheight, char sym)
         {
@@ -26,6 +26,6 @@ namespace snake1
             int y = random.Next(2, mapheight - 2);
             return new Point(x, y, sym);
         }
-        
+
     }
 }

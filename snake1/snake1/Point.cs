@@ -14,15 +14,15 @@ namespace snake1
 
         public Point()
         {
-           // Console.WriteLine(" we do new point"); 
+            // Console.WriteLine(" we do new point"); 
         }
 
         public Point(int _x, int _y, char _sym)
-            {
-            x= _x;
-            y= _y;
-            sym= _sym;
-            }
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
 
         public Point(Point p)
         {
@@ -33,7 +33,7 @@ namespace snake1
 
         public void Move(int offset, Direction direction)
         {
-if(direction== Direction.RIGHT)
+            if (direction == Direction.RIGHT)
             {
                 x = x + offset;
             }
@@ -53,7 +53,7 @@ if(direction== Direction.RIGHT)
 
         public override string ToString()
         {
-            return x + ","+ y + ", "+ sym;
+            return x + "," + y + ", " + sym;
         }
 
         public bool IsMit(Point p)
