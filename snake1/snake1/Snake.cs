@@ -40,6 +40,20 @@ namespace snake1
             return NextPoint;
         }
 
+        internal bool IsMitTail()
+        {
+            var head = pList.Last();
+            for(int i=0; i<pList.Count-2; i++)
+            {
+                if (head.IsMit(pList[i]))
+                    return true;
+            }
+            return false;
+
+        }
+
+
+
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)

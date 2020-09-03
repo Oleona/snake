@@ -16,5 +16,25 @@ namespace snake1
                 p.Drow();
             }
         }
+
+        internal bool IsMit(figure figure)
+        {
+            foreach(var p in pList)
+            {
+                if (figure.IsMit(p))
+                    return true;
+            }
+            return false;
+        }
+
+        public bool IsMit(Point point)
+        {
+foreach(var p in pList)
+            {
+                if (p.IsMit(point))
+                    return true;
+            }
+            return false;
+        }
     }
 }
